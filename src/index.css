@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ================= Ecommerce Color System ================= */
+/* Neutral, brand-safe, product-focused */
+
+:root {
+  /* Grays (UI backgrounds, borders) */
+  --gray-50:  #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+
+  /* Slate (text, headings, icons) */
+  --slate-50:  #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+
+  /* Brand / Actions */
+  --primary-green: #16a34a; /* success, checkout */
+  --primary-blue:  #2563eb; /* links, CTA */
+  --primary-red:   #dc2626; /* sale, danger */
+
+  --accent-yellow: #facc15; /* offers, highlights */
+
+  /* Text */
+  --text-light: #111827;
+
+  /* Background */
+  --bg: #ffffff;
+  --bg-card: #ffffff;
+}
+
+/* ================= Dark Mode ================= */
+
+.dark {
+  --gray-50:  #111827;
+  --gray-100: #1f2937;
+  --gray-200: #374151;
+  --gray-300: #4b5563;
+  --gray-400: #9ca3af;
+  --gray-500: #d1d5db;
+
+  --slate-600: #475569;
+  --slate-700: #334155;
+
+  --bg: #0f172a;
+  --bg-card: #020617;
+  --text: #f9fafb;
+
+  --accent: #38bdf8;
+}
+
+/* ================= Base ================= */
+
+body {
+  background: #E2E4EB;
+  color: var(--text-light);
+}
+
+/* ================= Animations ================= */
+
+/* Fade In */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* ================= 3D Utilities ================= */
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
